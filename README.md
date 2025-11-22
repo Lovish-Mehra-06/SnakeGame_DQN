@@ -14,6 +14,18 @@ A Python project that uses **Deep Q-Learning (DQN)** to train an AI to play the 
 - Automatically saves the best-performing model (`model.pth`).
 
 ---
+## 📷 Screenshots
+
+### 1. Snake Game Start
+![Snake Start](SnakeGAmeAi_screenshots/snake_start2.png)
+
+### 2. AI Playing the Game
+![AI Playing](SnakeGAmeAi_screenshots/ai_playing.png)
+
+### 3. Training Progress Plot
+![Training Plot](SnakeGAmeAi_screenshots\Figure_1_14_mins.png)
+
+---
 
 ## 🛠️ Installation
 
@@ -37,7 +49,10 @@ source venv/bin/activate
 3. Install dependencies:
 
 ```bash
-pip install -r requirements.txt
+numpy
+matplotlib
+pygame
+pytorch
 ```
 
 ---
@@ -53,7 +68,7 @@ python agent.py
 2. To **train faster**, disable Pygame rendering in `agent.py`:
 
 ```python
-game = SnakeGameAI(render=False)
+game = SnakeGameAI()
 ```
 
 3. The **best model** is automatically saved as `model.pth` when a new high score is achieved.
