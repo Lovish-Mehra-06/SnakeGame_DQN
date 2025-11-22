@@ -1,31 +1,37 @@
-# SnakeGame_DQN
-A Python project that uses Deep Q-Learning (DQN) to train an AI to play Snake. Features include efficient training with experience replay, reward shaping, and optional visualization of training progress.
-Here’s a **ready-to-use `README.md`** for your Snake AI project:
 
+# SnakeGame_DQN
+
+A Python project that uses **Deep Q-Learning (DQN)** to train an AI to play the classic Snake game. The AI learns via experience replay and reward shaping to maximize its score and survival.
 
 ---
 
-## Features
+## 🚀 Features
 
 - Deep Q-Learning (DQN) based AI for Snake.
 - Experience replay and batch training for stable learning.
-- Reward shaping for efficient movement and survival.
+- Reward shaping to encourage efficient movement and survival.
 - Optional Pygame visualization of the snake’s gameplay.
-- Automatically saves the best-performing model.
+- Automatically saves the best-performing model (`model.pth`).
 
 ---
 
-## Installation
+## 🛠️ Installation
 
 1. Clone the repository:
+
 ```bash
-git clone https://github.com/Lovish-Mehra-06/SmartSnakeAI.git
+git clone https://github.com/Lovish-Mehra-06/SnakeGame_DQN.git
+cd SnakeGame_DQN
 ````
 
-2. Navigate to the project directory:
+2. (Optional) Create a virtual environment:
 
 ```bash
-cd SmartSnakeAI
+python -m venv venv
+# Windows
+venv\Scripts\activate
+# macOS/Linux
+source venv/bin/activate
 ```
 
 3. Install dependencies:
@@ -36,7 +42,7 @@ pip install -r requirements.txt
 
 ---
 
-## Usage
+## ▶️ Usage
 
 1. Run the training script:
 
@@ -44,48 +50,55 @@ pip install -r requirements.txt
 python agent.py
 ```
 
-2. To **train faster**, disable rendering in `SnakeGameAI`:
+2. To **train faster**, disable Pygame rendering in `agent.py`:
 
 ```python
-game = SnakeGameAI()
+game = SnakeGameAI(render=False)
 ```
 
-3. The **best model** is saved automatically as `model.pth`.
+3. The **best model** is automatically saved as `model.pth` when a new high score is achieved.
 
-4. To **load a trained model**, the agent will automatically attempt to load `model.pth` if it exists.
-
----
-
-## How It Works
-
-* The AI observes the game state (danger straight, right, left; direction; food location).
-* It chooses moves using an **epsilon-greedy policy**.
-* Rewards:
-
-  * Eating food: +10
-  * Dying: –10
-  * Small movement penalty: –0.01
-* Training happens using **short-term memory** (per move) and **long-term memory** (experience replay).
+4. The agent will **load the saved model** if `model.pth` exists, allowing training to continue from previous progress.
 
 ---
 
-## Requirements
+## 📈 Reward System
 
-* Python 3.7+
-* Pygame
-* Numpy
-* PyTorch
-* Matplotlib (optional, for plotting training progress)
-
----
-
-## Optional Improvements
-
-* Use GPU for faster training.
-* Increase network size for higher maximum scores.
-* Run multiple snakes in parallel for accelerated experience collection.
+| Event                           | Reward |
+| ------------------------------- | ------ |
+| Eating food                     | +10    |
+| Dying                           | –10    |
+| Small movement penalty          | –0.01  |
+| Else                            |     0  |
 
 ---
 
+## ⚙️ Code Overview
 
+* `agent.py` — AI agent logic: state representation, action selection, memory, training loop.
+* `model.py` — Neural network (Linear Q-Net) and trainer class.
+* `game.py` — Snake game logic using Pygame.
+* `helper.py` — Utility functions, including plotter for training progress.
+
+---
+
+## 📌 Tips
+
+* Disable rendering to speed up training.
+* Adjust reward values to improve learning behavior.
+* Train longer for higher maximum scores.
+
+---
+
+## 🎓 Credits / Inspiration
+
+This project is based on the **FreeCodeCamp Python + PyTorch + Pygame Reinforcement Learning – Train an AI to Play Snake**.
+
+* [FreeCodeCamp Video Tutorial](https://www.youtube.com/watch?v=L8ypSXwyBds)
+
+---
+
+**Lovish Mehra** – [GitHub](https://github.com/Lovish-Mehra-06)
+
+---
 
