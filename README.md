@@ -23,7 +23,7 @@ A Python project that uses **Deep Q-Learning (DQN)** to train an AI to play the 
 ![AI Playing](SnakeGAmeAi_screenshots/ai_playing.png)
 
 ### 3. Training Progress Plot
-![Training Plot](SnakeGAmeAi_screenshots\Figure_1_14_mins.png)
+![Training Plot](SnakeGAmeAi_screenshots/Figure_1_14_mins.png)
 
 ---
 
