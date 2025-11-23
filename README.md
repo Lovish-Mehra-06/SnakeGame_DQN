@@ -15,15 +15,23 @@ A Python project that uses **Deep Q-Learning (DQN)** to train an AI to play the 
 
 ---
 ## 📷 Screenshots
+### 1. Snake Game Start & AI Playing the Game
 
-### 1. Snake Game Start
-![Snake Start](SnakeGAmeAi_screenshots/snake_start2.png)
+<p float="left">
+  <img src="SnakeGAmeAi_screenshots/snake_start2.png" width="500" />
+  <img src="SnakeGAmeAi_screenshots/snake_start3.png" width="500" />
+  <img src="SnakeGAmeAi_screenshots/Game2.png" width="500" />
+  <img src="SnakeGAmeAi_screenshots/Game1.png" width="500" />
+</p>
 
-### 2. AI Playing the Game
-![AI Playing](SnakeGAmeAi_screenshots/ai_playing.png)
+### 2. Training Progress Plot
 
-### 3. Training Progress Plot
-![Training Plot](SnakeGAmeAi_screenshots/Figure_1_14_mins.png)
+<p float="left">
+  <img src="SnakeGAmeAi_screenshots/Fig3.png" width="500" />
+  <img src="SnakeGAmeAi_screenshots/Fig4.png" width="500" />
+  <img src="SnakeGAmeAi_screenshots/Fig5.png" width="500" />
+  <img src="SnakeGAmeAi_screenshots/Fig2.png" width="500" />
+</p>
 
 ---
 
